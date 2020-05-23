@@ -3,7 +3,7 @@ from random import randint
 print("Quantum Key Distribution project / 양자 키 분배 프로젝트\n")
 input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
 
-bit = 1000
+bit = 72
 
 Alice_random_bit = []
 Alice_random_sending_basis = []
@@ -112,15 +112,12 @@ Shared_secret_key_num = []
 
 def Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures):
     print("\n\n[PUBLIC DISCUSSION OF BASIS / 전송 패드와 측정패드가 일치하는지 여부 검증]\n\n")
-    print(eavesdropper)
     if eavesdropper != '1':
-        print('a')
         for i in range(bit):
             if Polarization_Eve_measures_and_sends[i] == Photon_polarization_Bob_measures[i]:
                 Photon_polarization.append(Polarization_Eve_measures_and_sends [i])
                 Shared_secret_key_num.append(i)
     else:
-        print('b')
         for i in range(bit):
             if Photon_polarization_Alice_sends[i] == Photon_polarization_Bob_measures[i]:
                 Photon_polarization.append(Photon_polarization_Alice_sends[i])
