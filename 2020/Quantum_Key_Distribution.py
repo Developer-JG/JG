@@ -1,9 +1,9 @@
 from random import randint
 
 print("Quantum Key Distribution project / 양자 키 분배 프로젝트\n")
+input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
 
-bit = 72
-
+bit = 1000
 
 Alice_random_bit = []
 Alice_random_sending_basis = []
@@ -73,8 +73,6 @@ def Eve(Eve_random_measuring_basis, Polarization_Eve_measures_and_sends):
                 Polarization_Eve_measures_and_sends.append('Bottom_Right')
     print(Polarization_Eve_measures_and_sends)
 
-    Photon_polarization_Alice_sends = Polarization_Eve_measures_and_sends
-
 
 Bobs_random_measuring_basis = []
 Photon_polarization_Bob_measures = []
@@ -112,12 +110,21 @@ Photon_polarization = []
 Shared_secret_key = []
 Shared_secret_key_num = []
 
-def Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures):
+def Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures):
     print("\n\n[PUBLIC DISCUSSION OF BASIS / 전송 패드와 측정패드가 일치하는지 여부 검증]\n\n")
-    for i in range(bit):
-        if Photon_polarization_Alice_sends[i] == Photon_polarization_Bob_measures[i]:
-            Photon_polarization.append(Photon_polarization_Alice_sends[i])
-            Shared_secret_key_num.append(i)
+    print(eavesdropper)
+    if eavesdropper != '1':
+        print('a')
+        for i in range(bit):
+            if Polarization_Eve_measures_and_sends[i] == Photon_polarization_Bob_measures[i]:
+                Photon_polarization.append(Polarization_Eve_measures_and_sends [i])
+                Shared_secret_key_num.append(i)
+    else:
+        print('b')
+        for i in range(bit):
+            if Photon_polarization_Alice_sends[i] == Photon_polarization_Bob_measures[i]:
+                Photon_polarization.append(Photon_polarization_Alice_sends[i])
+                Shared_secret_key_num.append(i)
 
     for i in range(len(Photon_polarization)):
         if Photon_polarization[i] == 'Top' or Photon_polarization[i] == 'Top_right':
@@ -127,8 +134,9 @@ def Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarizat
 
 
 def main():
-    input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
     eavesdropper = input("\neavesdropper / 도청자 ([yes](0), no(1)) : ")
+    if eavesdropper != '1':
+        eavesdropper = 0
 
     Alice (bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends)
 
@@ -136,28 +144,31 @@ def main():
         Eve (Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
 
     Bob (bit, Bobs_random_measuring_basis, Photon_polarization_Bob_measures)
-    Public_discussion_of_basis (Photon_polarization_Alice_sends, Photon_polarization_Bob_measures)
+    Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures)
 
-    print("Shared secret key / 최종적으로 생성되는 비밀키\n")
-    key_02 = (''.join(Shared_secret_key))
-    print("binary number / 2진수 : {0}".format(key_02))
-    key_02 = '0b' + key_02
-    key_10 = int(key_02, 2)
-    print("decimal number / 10진수 : {0}".format(key_10))
-
-    print("\n\nErrors in key / 생성된 비밀키에 대한 무결성 검증\n")
-    num, eavesdropper = 0, 0
-    for i in Shared_secret_key_num:
-        print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i, Alice_random_bit[i]))
-        print("{0}th Shared secret key / {0}번째 최종적으로 생성되는 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
-        if int(Alice_random_bit[i]) != int(Shared_secret_key[num]):
-            eavesdropper = eavesdropper + 1
-        num = num + 1
-
-    if eavesdropper != 0:
-        print("\nEavesdropper has been found / 도청자가 발견됨")
+    if len(Shared_secret_key) == 0:
+        print("All Mismatch / 전부 일치하지 않음\n")
     else:
-        print("\nEavesdropper has been not found / 도청자가 발견되지 않음")
+        print("Shared secret key / 최종적으로 생성되는 비밀키\n")
+        key_02 = (''.join(Shared_secret_key))
+        print("binary number / 2진수 : {0}".format(key_02))
+        key_02 = '0b' + key_02
+        key_10 = int(key_02, 2)
+        print("decimal number / 10진수 : {0}".format(key_10))
+
+        print("\n\nErrors in key / 생성된 비밀키에 대한 무결성 검증\n")
+        num, eavesdropper = 0, 0
+        for i in Shared_secret_key_num:
+            print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i, Alice_random_bit[i]))
+            print("{0}th Shared secret key / {0}번째 최종적으로 생성되는 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
+            if int(Alice_random_bit[i]) != int(Shared_secret_key[num]):
+                eavesdropper = eavesdropper + 1
+            num = num + 1
+
+        if eavesdropper != 0:
+            print("\nEavesdropper has been found / 도청자가 발견됨")
+        else:
+            print("\nEavesdropper has been not found / 도청자가 발견되지 않음")
 
 
 if __name__ == "__main__":
