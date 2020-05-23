@@ -128,11 +128,11 @@ def Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarizat
 
 def main():
     input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
-    eavesdropper = int(input("\neavesdropper / 도청자 ([yes](0), no(1)) : "))
+    eavesdropper = input("\neavesdropper / 도청자 ([yes](0), no(1)) : ")
 
     Alice (bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends)
 
-    if eavesdropper != 1:
+    if eavesdropper != '1':
         Eve (Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
 
     Bob (bit, Bobs_random_measuring_basis, Photon_polarization_Bob_measures)
