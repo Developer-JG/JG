@@ -5,10 +5,6 @@ input("Enter to start quantum key distribution / 양자 키 분배를 시작하�
 
 bit = 72
 
-Alice_random_bit = []
-Alice_random_sending_basis = []
-Photon_polarization_Alice_sends = []
-
 def Alice (bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends):
     print("\n\n\n[Alice / 통신 과정의 첫 번째 당사자]\n")
     print("Alice's random bit / 앨리스가 생성한 비트 :")
@@ -42,9 +38,6 @@ def Alice (bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarizatio
     print(Photon_polarization_Alice_sends)
 
 
-Eve_random_measuring_basis = []
-Polarization_Eve_measures_and_sends = []
-
 def Eve(Eve_random_measuring_basis, Polarization_Eve_measures_and_sends):
     print("\n\n[Eve / 엿듣는 사람, 소극적 공격자를 뜻한다]\n")
     print("Eve's random measuring basis / 이브가 임의로 선택한 측정필터 :")
@@ -73,9 +66,6 @@ def Eve(Eve_random_measuring_basis, Polarization_Eve_measures_and_sends):
                 Polarization_Eve_measures_and_sends.append('Bottom_Right')
     print(Polarization_Eve_measures_and_sends)
 
-
-Bobs_random_measuring_basis = []
-Photon_polarization_Bob_measures = []
 
 def Bob (bit, Bobs_random_measuring_basis, Photon_polarization_Bob_measures):
     print("\n\n[Bob / 통신 과정의 두 번째 당사자]\n")
@@ -106,11 +96,8 @@ def Bob (bit, Bobs_random_measuring_basis, Photon_polarization_Bob_measures):
     print(Photon_polarization_Bob_measures)
 
 
-Photon_polarization = []
-Shared_secret_key = []
-Shared_secret_key_num = []
-
-def Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures):
+def Public_discussion_of_basis(eavesdropper, Photon_polarization, Shared_secret_key, Shared_secret_key_num, \
+                               Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures):
     print("\n\n[PUBLIC DISCUSSION OF BASIS / 전송 패드와 측정패드가 일치하는지 여부 검증]\n\n")
     if eavesdropper != '1':
         for i in range(bit):
@@ -131,6 +118,18 @@ def Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Po
 
 
 def main():
+
+    Alice_random_bit = []
+    Alice_random_sending_basis = []
+    Photon_polarization_Alice_sends = []
+    Eve_random_measuring_basis = []
+    Polarization_Eve_measures_and_sends = []
+    Bobs_random_measuring_basis = []
+    Photon_polarization_Bob_measures = []
+    Photon_polarization = []
+    Shared_secret_key = []
+    Shared_secret_key_num = []
+
     eavesdropper = input("\neavesdropper / 도청자 ([yes](0), no(1)) : ")
     if eavesdropper != '1':
         eavesdropper = 0
@@ -141,7 +140,8 @@ def main():
         Eve (Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
 
     Bob (bit, Bobs_random_measuring_basis, Photon_polarization_Bob_measures)
-    Public_discussion_of_basis(eavesdropper, Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures)
+    Public_discussion_of_basis (eavesdropper, Photon_polarization, Shared_secret_key, Shared_secret_key_num, \
+                                Photon_polarization_Alice_sends, Polarization_Eve_measures_and_sends, Photon_polarization_Bob_measures)
 
     if len(Shared_secret_key) == 0:
         print("All Mismatch / 전부 일치하지 않음\n")
@@ -166,6 +166,9 @@ def main():
             print("\nEavesdropper has been found / 도청자가 발견됨")
         else:
             print("\nEavesdropper has been not found / 도청자가 발견되지 않음")
+
+    input()
+    main()
 
 
 if __name__ == "__main__":
