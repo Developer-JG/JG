@@ -148,10 +148,10 @@ def main():
     else:
         print("Shared secret key / 최종적으로 생성되는 비밀키\n")
         key_02 = (''.join(Shared_secret_key))
-        print("binary number / 2진수 : {0}".format(key_02))
+        print("binary number / 2진수 : {0}  ({1})".format(key_02, len(Shared_secret_key)))
         key_02 = '0b' + key_02
         key_10 = int(key_02, 2)
-        print("decimal number / 10진수 : {0}".format(key_10))
+        print("decimal number / 10진수 : {0}  ({1})".format(key_10, len(list(str(key_10)))))
 
         print("\n\nErrors in key / 생성된 비밀키에 대한 무결성 검증\n")
         num, eavesdropper = 0, 0
@@ -163,9 +163,9 @@ def main():
             num = num + 1
 
         if eavesdropper != 0:
-            print("\nEavesdropper has been found / 도청자가 발견됨")
+            print("\nEavesdropper has been found / 도청자가 발견됨  ({0}/{1})".format(len(Shared_secret_key), eavesdropper))
         else:
-            print("\nEavesdropper has been not found / 도청자가 발견되지 않음")
+            print("\nEavesdropper has been not found / 도청자가 발견되지 않음  ({0}/{1})".format(len(Shared_secret_key), eavesdropper))
 
     input()
     main()
