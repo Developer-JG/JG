@@ -157,7 +157,7 @@ def main():
         num, eavesdropper = 0, 0
         for i in Shared_secret_key_num:
             print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i, Alice_random_bit[i]))
-            print("{0}th Shared secret key / {0}번째 최종적으로 생성되는 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
+            print("{0}th Shared secret key / {0}번째로 생성된 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
             if int(Alice_random_bit[i]) != int(Shared_secret_key[num]):
                 eavesdropper = eavesdropper + 1
             num = num + 1
