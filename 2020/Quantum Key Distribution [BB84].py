@@ -3,7 +3,7 @@ from random import randint
 print("Quantum Key Distribution project [BB84] / 양자 키 분배 프로젝트 [bb84]\n")
 input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
 
-bit = 10
+bit = 72
 
 def Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends, Shared_secret_key, Shared_secret_key_num):
     print("\n\n\n[Alice / 통신 과정의 첫 번째 당사자]\n")
