@@ -38,30 +38,8 @@ def Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization
     print(Photon_polarization_Alice_sends)
 
 
-def Alice_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization, Alice_random_bit, Shared_secret_key, Shared_secret_key_num):
-    print("\n\n[PUBLIC DISCUSSION OF BASIS / 전송 패드와 측정패드가 일치하는지 여부 검증]\n\n")
-
-    for i in range(bit):
-        if Photon_polarization_Alice_sends[i] == Photon_polarization_Bob_measures[i]:
-            Photon_polarization.append(Photon_polarization_Alice_sends[i])
-            Shared_secret_key_num.append(i)
-
-    for i in range(len(Photon_polarization)):
-        if Photon_polarization[i] == 'Top' or Photon_polarization[i] == 'Top_right':
-            Shared_secret_key.append('0')
-        elif Photon_polarization[i] == 'Right' or Photon_polarization[i] == 'Bottom_Right':
-            Shared_secret_key.append('1')
-
-    if len(Shared_secret_key) == 0:
-        print("All Mismatch / 전부 일치하지 않음\n")
-    else:
-        print("Shared secret key / 최종적으로 생성되는 비밀키\n")
-        key_02 = (''.join(Shared_secret_key))
-        print("binary number / 2진수 : {0}  ({1})".format(key_02, len(Shared_secret_key)))
-        key_02 = '0b' + key_02
-        key_10 = int(key_02, 2)
-        print("decimal number / 10진수 : {0}  ({1})".format(key_10, len(list(str(key_10)))))
-
+def Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared_secret_key_num):
+    if len(Shared_secret_key) != 0:
         print("\n\nErrors in key / 생성된 비밀키에 대한 무결성 검증\n")
         num, eavesdropper = 0, 0
         for i in Shared_secret_key_num:
@@ -136,6 +114,30 @@ def Bob(Bobs_random_measuring_basis, Photon_polarization_Bob_measures, Photon_po
                 Photon_polarization_Bob_measures.append('Bottom_Right')
     print(Photon_polarization_Bob_measures)
 
+def Bob_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization,Shared_secret_key, Shared_secret_key_num):
+    print("\n\n[PUBLIC DISCUSSION OF BASIS / 전송 패드와 측정패드가 일치하는지 여부 검증]\n\n")
+
+    for i in range(bit):
+        if Photon_polarization_Alice_sends[i] == Photon_polarization_Bob_measures[i]:
+            Photon_polarization.append(Photon_polarization_Alice_sends[i])
+            Shared_secret_key_num.append(i)
+
+    for i in range(len(Photon_polarization)):
+        if Photon_polarization[i] == 'Top' or Photon_polarization[i] == 'Top_right':
+            Shared_secret_key.append('0')
+        elif Photon_polarization[i] == 'Right' or Photon_polarization[i] == 'Bottom_Right':
+            Shared_secret_key.append('1')
+
+    if len(Shared_secret_key) == 0:
+        print("All Mismatch / 전부 일치하지 않음\n")
+    else:
+        print("Shared secret key / 최종적으로 생성되는 비밀키\n")
+        key_02 = (''.join(Shared_secret_key))
+        print("binary number / 2진수 : {0}  ({1})".format(key_02, len(Shared_secret_key)))
+        key_02 = '0b' + key_02
+        key_10 = int(key_02, 2)
+        print("decimal number / 10진수 : {0}  ({1})".format(key_10, len(list(str(key_10)))))
+
 
 def main():
     Alice_random_bit = []
@@ -157,7 +159,8 @@ def main():
     if eavesdropper != '1':
         Eve(Photon_polarization_Alice_sends, Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
     Bob(Bobs_random_measuring_basis, Photon_polarization_Bob_measures, Photon_polarization_Alice_sends)
-    Alice_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization, Alice_random_bit, Shared_secret_key, Shared_secret_key_num)
+    Bob_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization, Shared_secret_key, Shared_secret_key_num)
+    Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared_secret_key_num)
 
     input()
     main()
