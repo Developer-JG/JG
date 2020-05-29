@@ -1,9 +1,9 @@
 from random import randint
 
-print("Quantum Key Distribution project [BB84] / 양자 키 분배 프로젝트 [bb84]\n")
+print("Quantum Key Distribution project [BB84] / 양자 키 분배 프로젝트 [BB84]\n")
 input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
 
-bit = 72
+bit = 36
 
 def Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends, Shared_secret_key, Shared_secret_key_num):
     print("\n\n\n[Alice / 통신 과정의 첫 번째 당사자]\n")
@@ -46,8 +46,8 @@ def Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared
             print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i, Alice_random_bit[i]))
             print("{0}th Shared secret key / {0}번째로 생성된 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
             if int(Alice_random_bit[i]) != int(Shared_secret_key[num]):
-                eavesdropper = eavesdropper + 1
-            num = num + 1
+                eavesdropper += 1
+            num += 1
 
         if eavesdropper != 0:
             print("\nEavesdropper has been found / 도청자가 발견됨  ({0}/{1})".format(len(Shared_secret_key), eavesdropper))
@@ -140,27 +140,62 @@ def Bob_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polar
 
 
 def main():
-    Alice_random_bit = []
-    Alice_random_sending_basis = []
-    Photon_polarization_Alice_sends = []
-    Eve_random_measuring_basis = []
-    Polarization_Eve_measures_and_sends = []
-    Bobs_random_measuring_basis = []
-    Photon_polarization_Bob_measures = []
-    Photon_polarization = []
-    Shared_secret_key = []
-    Shared_secret_key_num = []
+    eavesdropper = input("\neavesdropper (intiger) / 도청 횟수 (숫자) : ")
+    try:
+        eavesdropper = int(eavesdropper)
+        if eavesdropper >= 2:
+                num = eavesdropper
+        if eavesdropper <= 0:
+            eavesdropper = 0
+    except:
+        if eavesdropper != "-":
+            eavesdropper = 0
 
-    eavesdropper = input("\neavesdropper / 도청자 ([yes](0), no(1)) : ")
-    if eavesdropper != '1':
-        eavesdropper = 0
+    # develope code / 개발자 코드
+    d_repeating, d_print = 1, 1
+    if eavesdropper == "-":
+        print("\n-------[(access success) / (접근 성공)]-------")
+        d_eavesdropper = int(input("\neavesdropper (intiger) / 도청 횟수 (숫자) : "))
+        d_repeating = int(input("eavesdropper (repeating) / 도청자 반복 횟수 : "))
 
-    Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends, Shared_secret_key, Shared_secret_key_num)
-    if eavesdropper != '1':
-        Eve(Photon_polarization_Alice_sends, Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
-    Bob(Bobs_random_measuring_basis, Photon_polarization_Bob_measures, Photon_polarization_Alice_sends)
-    Bob_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization, Shared_secret_key, Shared_secret_key_num)
-    Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared_secret_key_num)
+    d_repeating -= 1
+    d_r_repeating, yes, no = 0, 0, 0
+    while d_repeating >= 0:
+        try:
+            eavesdropper = d_eavesdropper
+        except:
+            pass
+
+        Alice_random_bit = []
+        Alice_random_sending_basis = []
+        Photon_polarization_Alice_sends = []
+        Eve_random_measuring_basis = []
+        Polarization_Eve_measures_and_sends = []
+        Bobs_random_measuring_basis = []
+        Photon_polarization_Bob_measures = []
+        Photon_polarization = []
+        Shared_secret_key = []
+        Shared_secret_key_num = []
+
+        Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends, Shared_secret_key, Shared_secret_key_num)
+
+        while eavesdropper >= 1:
+            Eve(Photon_polarization_Alice_sends, Eve_random_measuring_basis, Polarization_Eve_measures_and_sends)
+            eavesdropper -= 1
+
+        Bob(Bobs_random_measuring_basis, Photon_polarization_Bob_measures, Photon_polarization_Alice_sends)
+        Bob_Public_discussion_of_basis(Photon_polarization_Alice_sends, Photon_polarization_Bob_measures, Photon_polarization, Shared_secret_key, Shared_secret_key_num)
+        Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared_secret_key_num)
+
+        if eavesdropper != 0:
+            yes += 1
+        else:
+            no += 1
+
+        d_r_repeating += 1
+        d_repeating -= 1
+
+        print('\nfound / 발견됨 : {0}, not found / 발견되지 않음 : {1}'.format(no, yes))
 
     input()
     main()
