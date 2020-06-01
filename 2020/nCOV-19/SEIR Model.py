@@ -1,6 +1,6 @@
 import scipy.integrate as spi
-import numpy as np
 import numpy
+import numpy as np
 import pylab as pl
 
 # Initial conditions
@@ -22,8 +22,6 @@ S0_ = S0/N
 E0 =  E0/N
 I0 = I0/N
 R0 = R0/N
-
-print(S0_) # 양성판정 확진자 + 음성판정 격리해지자수 비율 proporion
 
 beta = 0.1934 # 중국논문에 나온 beta 값
 gamma = 1/14

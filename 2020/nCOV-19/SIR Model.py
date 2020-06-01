@@ -45,7 +45,7 @@ solution = numpy.array(solution)
 # plot result
 plt.figure(figsize=(10, 6))
 plt.plot(t, solution[:, 0], label="S(Susceptibles)")
-plt.plot(t, solution[:, 1], label="I(Infectious)")
+plt.plot(t, solution[:, 1], label="I (Infectious)")
 plt.plot(t, solution[:, 2], label="R(Recovereds)")
 plt.grid()
 plt.legend()
