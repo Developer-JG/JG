@@ -1,6 +1,5 @@
 from random import randint
 from time import sleep
-import time
 
 print("\n청소구역 배정 프로그램\n")
 
