@@ -24,6 +24,55 @@ div_10 = division("교목실", 5, 0, [])
 div_list = [div_1, div_2, div_3, div_4, div_5, \
             div_6, div_7, div_8, div_9, div_10]
 
+def name(name):
+    if name == 1:
+        return '권준서'
+    elif name == 2:
+        return '김민성'
+    elif name == 3:
+        return '김하늘'
+    elif name == 4:
+        return '문세훈'
+    elif name == 5:
+        return '문채림'
+    elif name == 6:
+        return '박권영'
+    elif name == 7:
+        return '안종혁'
+    elif name == 8:
+        return '손유석'
+    elif name == 9:
+        return '윤호영'
+    elif name == 10:
+        return '이규민'
+    elif name == 11:
+        return '이시연'
+    elif name == 12:
+        return '이예나'
+    elif name == 13:
+        return '이은서'
+    elif name == 14:
+        return '전상민'
+    elif name == 15:
+        return '정재민'
+    elif name == 16:
+        return '정한솔'
+    elif name == 17:
+        return '조성현'
+    elif name == 18:
+        return '조용준'
+    elif name == 19:
+        return '진준'
+    elif name == 20:
+        return '진호영'
+    elif name == 21:
+        return '천건우'
+    elif name == 22:
+        return '최상민'
+    elif name == 23:
+        return '최수호'
+    elif name == 24:
+        return '황정규'
 
 def main():
     input("시작하려면 아무키나 누르세요.")
@@ -99,15 +148,13 @@ def main():
         print("(* 누락된 인원이 생길 수 있습니다.)")
     print("\n")
 
-    plag = input("시작하려면 엔터")
-    if plag == 'stop':
-        main()
+    input("(시작하려면 엔터)")
 
     sleep(2)
 
-    print("\n" * 15)
+    print("\n")
     print("청소구역 역할분배를 시작합니다.")
-    print("\n\n")
+    print("\n")
 
     while True:
         num = randint(0, len(all_list))
@@ -125,9 +172,10 @@ def main():
     i = 0
     while i < len(div_list):
         sleep(0.4)
-        print("{0}({1} / {2})".format(div_list[i].name, div_list[i].now, div_list[i].max))
-        print()
-        print(div_list[i].list)
+        print("{0} ({1} / {2})".format(div_list[i].name, div_list[i].now, div_list[i].max))
+        div_list[i].list.sort()
+        for j in div_list[i].list:
+            print(name(j), end=' ')
         print("\n")
         i += 1
 
