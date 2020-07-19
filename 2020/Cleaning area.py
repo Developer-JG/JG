@@ -1,13 +1,17 @@
 from random import randint
 from time import sleep
 import time
+import datetime
 
 name = 0
 try:
-    import name_file
+    from cleaning_area import name_file
+
     name = 1
 except:
     name = 0
+
+storage_location = '/Users/hwang_jeonggyu/Desktop/'
 
 print("\n청소구역 배정 프로그램\n")
 
@@ -128,6 +132,14 @@ def main():
     print("\n"*30)
     print("청소구역 역할분배를 시작합니다.\n")
 
+    nowdate = datetime.datetime.now()
+    save_file = open(storage_location + nowdate.strftime("%y%m%d_%H%M%S") + '.txt', 'w')
+    save_file.write(nowdate.strftime("%y%m%d_%H%M%S") + "\n\n")
+    save_file.write("시작번호 : {0} / 마지막번호 : {1}".format(st_num, ed_num) + "\n\n")
+    save_file.write("인식된 모든 번호 : {0}".format(all_list) + "\n")
+    save_file.write("제외된 모든 번호 : {0}".format(except_list) + "\n\n")
+    save_file.write("출력방법 : {0}".format(output_method) + "\n\n\n")
+
     start = time.time()
 
     while True:
@@ -149,20 +161,28 @@ def main():
     while i < len(div_list):
         sleep(0.4)
         print("{0} ({1} / {2})".format(div_list[i].name, div_list[i].now, div_list[i].max))
+        save_file.write("{0} ({1} / {2})".format(div_list[i].name, div_list[i].now, div_list[i].max) + "\n")
         div_list[i].list.sort()
 
         if output_method == 'name':
             for j in div_list[i].list:
                 print(name_file.name(j), end=' ')
+                save_file.write(name_file.name(j) + " ")
             print("\n")
+            save_file.write("\n\n")
+
         elif output_method == 'number':
             print(div_list[i].list)
+            save_file.write("{0}".format(div_list[i].list))
             print()
+            save_file.write("\n\n")
 
         i += 1
         sleep(0.2)
 
     print("time : {0}\n".format(show_time))
+
+    save_file.close()
 
     re = input("다시 시작하려면 'restart'를 입력하십시오")
     if re == "restart":
