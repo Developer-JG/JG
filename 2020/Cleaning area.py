@@ -30,7 +30,7 @@ div_5 = division("줄 맞추기", 3, 0, [])
 div_6 = division("교실 닦기", 3, 0, [])
 div_7 = division("복도 쓸고 닦기", 1, 0, [])
 div_8 = division("분리수거", 2, 0, [])
-div_9 = division("환경도우미", 2, 0, [])
+div_9 = division("환경도우미", 1, 0, [])
 div_10 = division("교목실", 5, 0, [])
 
 div_list = [div_1, div_2, div_3, div_4, div_5, \
