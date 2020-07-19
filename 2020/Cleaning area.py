@@ -151,8 +151,9 @@ def main():
             div_list[i].list.append(num)
             div_list[i].now += 1
             all_list.remove(num)
+            ter_num -= 1
 
-        if len(all_list) == 0:
+        if len(all_list) == 0 or ter_num == 0:
             break
 
     show_time = time.time() - start
@@ -167,7 +168,7 @@ def main():
         if output_method == 'name':
             for j in div_list[i].list:
                 print(name_file.name(j), end=' ')
-                save_file.write(name_file.name(j) + " ")
+                save_file.write(str(name_file.name(j)) + " ")
             print("\n")
             save_file.write("\n\n")
 
