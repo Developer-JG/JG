@@ -5,7 +5,7 @@ import datetime
 name = 0
 
 try:
-    from cleaning_area import name_file
+    import name_file
     name = 1
 except:
     name = 0
