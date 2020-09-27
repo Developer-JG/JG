@@ -1,4 +1,5 @@
 # import 정의
+
 from random import randint
 import time
 import datetime
