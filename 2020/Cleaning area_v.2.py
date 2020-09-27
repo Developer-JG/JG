@@ -1,4 +1,4 @@
-# import 정
+# import 정의
 from random import randint
 import time
 import datetime
@@ -20,9 +20,14 @@ except:
 storage_location = '/Users/hwang_jeonggyu/Desktop/'
 
 
+# 연산 방법
+
+operator_method = '1'
+
+
 # 소개
 
-print("\n청소구역 배정 프로그램\n")
+print("\n청소구역 배정 프로그램 (V.2)\n")
 
 
 # 부서 정의
@@ -55,7 +60,6 @@ def main():
     input("시작하려면 아무키나 누르세요.")
     print("\n")
 
-
     # 시작번호 입력
 
     while True:
@@ -69,21 +73,30 @@ def main():
         else:
             print("유효한 자연수를 입력하십시오\n")
 
-    print()
-
 
     # 마지막 번호 입력
 
     while True:
-        ed_num = input("마지막 번호를 입력하십시오. : ")
+        ed_num = input("\n마지막 번호를 입력하십시오. : ")
         if ed_num.isdigit():
             ed_num = int(ed_num)
             if ed_num > st_num:
                 break
             else:
-                print("시작번호보다 큰 숫자를 입력하십시오\n")
+                print("시작번호보다 큰 숫자를 입력하십시오")
+        elif ed_num == '-':
+            while True:
+                st_num = input("\n시작 번호를 입력하십시오. : ")
+                if st_num.isdigit():
+                    st_num = int(st_num)
+                    if st_num >= 1:
+                        break
+                    else:
+                        print("0보다 큰 숫자를 입력하십시오")
+                else:
+                    print("유효한 자연수를 입력하십시오")
         else:
-            print("유효한 자연수를 입력하십시오\n")
+            print("유효한 자연수를 입력하십시오")
 
     print()
 
@@ -103,14 +116,14 @@ def main():
 
     while True:
         print()
-        print("제외(ex) / 추가(pu) / 이동(mo) / 건너뛰기(enter)")
-        sel = input(" : ")
+        print("제외(q) / 추가(w) / 이동(e) / 인식된 숫자 보기 (r) /  건너뛰기(enter)")
+        sel = input(": ")
         print()
 
 
         # 원소 제외
 
-        if sel == "ex":
+        if sel == "q":
 
             while True:
                 ex_num = input("제외할 번호를 입력하십시오. : ")
@@ -120,7 +133,7 @@ def main():
                             try:
                                 all_list.remove(int(ex_num))
                                 except_list.append(int(ex_num))
-                                print("\n성공적으로 제외되었습니다.\n")
+                                print("\n성공적으로 제외되었습니다.\n\n")
                             except:
                                 print("이미 제외된 숫자입니다.\n")
                         else:
@@ -133,7 +146,7 @@ def main():
 
         # 원소 추가
 
-        elif sel == "pu":
+        elif sel == "w":
 
             while True:
                 pu_num = input("추가할 번호를 입력하십시오. : ")
@@ -145,7 +158,7 @@ def main():
                                 except_list.remove(int(ex_num))
                             except:
                                 pass
-                            print("\n성공적으로 추가되었습니다.\n")
+                            print("\n성공적으로 추가되었습니다.\n\n")
                         else:
                             print("이미 추가된 숫자입니다.\n")
                     else:
@@ -156,7 +169,7 @@ def main():
 
         # 특정부서로 연결
 
-        elif sel == "mo":
+        elif sel == "e":
 
             while True:
                 print()
@@ -180,7 +193,7 @@ def main():
                                     all_list.remove(int(in_num))
                                     div_list[in_div].list.append(int(in_num))
                                     div_list[in_div].now += 1
-                                    print("\n성공적으로 추가되었습니다.\n")
+                                    print("\n성공적으로 추가되었습니다.\n\n")
                                 else:
                                     print("유효한 부서 번호를 입력하십시오.\n")
                             else:
@@ -201,7 +214,7 @@ def main():
                                             all_list.append(int(in_num))
                                             div_list[out_div].list.remove(int(in_num))
                                             div_list[out_div].now -= 1
-                                            print("\n성공적으로 제되었습니다.\n")
+                                            print("\n성공적으로 제되었습니다.\n\n")
                                         else:
                                             print("해당 부서에 특정 숫자가 없습니다.\n")
                                     else:
@@ -216,7 +229,21 @@ def main():
                     break
 
 
-        # 리스트 확인
+        # 리스트 미리보기
+
+        elif sel == "r":
+            print("\n인식된 모든 번호 : ")
+            print(all_list)
+            input("\n(되돌아가려면 엔터)")
+
+
+        # 브레이크 (1)
+
+        elif sel == "y":
+            break
+
+
+        # 브레이크 (2)
 
         elif sel == "enter" or sel == "":
             nex = input("이대로 진행하시겠습니까? : ")
@@ -285,7 +312,7 @@ def main():
 
     nowdate = datetime.datetime.now()
     save_file = open(storage_location + nowdate.strftime("%y%m%d_%H%M%S") + '.txt', 'w')
-    save_file.write(nowdate.strftime("%y%m%d_%H%M%S") + "\n\n")
+    save_file.write(nowdate.strftime("%Y-%m-%d %H:%M:%S.%f") + "\n\n")
     save_file.write("시작번호 : {0} / 마지막번호 : {1}".format(st_num, ed_num) + "\n\n")
     save_file.write("인식된 모든 번호 : {0}".format(all_list) + "\n")
     save_file.write("제외된 모든 번호 : {0}".format(except_list) + "\n\n")
@@ -293,28 +320,66 @@ def main():
 
     start = time.time()
 
-
     # 분배
 
-    while True:
-        num = randint(0, len(all_list))
-        num = all_list[num - 1]
-        i = randint(1, len(div_list) - 1)
+    save_file.write("연산방법 : {0}".format(operator_method) + "\n\n\n")
 
-        if div_list[i].max > div_list[i].now:
-            div_list[i].list.append(num)
-            div_list[i].now += 1
-            all_list.remove(num)
-            ter_num -= 1
+    if operator_method == '1':
 
-        if len(all_list) == 0 or ter_num == 0:
-            break
+        while True:
+            plo = 0
+            plo_list = []
+            i = randint(1, len(div_list) - 1)
+
+            while div_list[i].now != 0:
+                i = randint(1, len(div_list) - 1)
+
+            while plo != int(div_list[i].max):
+
+                if len(all_list) == 0:
+                    break
+
+                num = randint(0, len(all_list))
+                num -= 1
+                num = all_list[num]
+                div_list[i].now += 1
+                plo_list.append(num)
+                all_list.remove(num)
+                plo += 1
+                ter_num -= 1
+
+            div_list[i].list = plo_list
+
+            if len(all_list) == 0 or ter_num == 0:
+                break
+
+    elif operator_method == '2':
+
+        while True:
+            print()
+            num = randint(0, len(all_list))
+            num = all_list[num - 1]
+            i = randint(1, len(div_list) - 1)
+
+            if div_list[i].max > div_list[i].now:
+                div_list[i].list.append(num)
+                div_list[i].now += 1
+                all_list.remove(num)
+                ter_num -= 1
+
+            if len(all_list) == 0 or ter_num == 0:
+                break
+
+    for i in range(len(div_list)):
+        div_list[i].list.sort
+
 
     show_time = time.time() - start
 
 
     # 출력
 
+    i = 0
     for i in range(len(div_list)):
         if div_list[i].now > 0:
             print("{0} ({1} / {2})".format(div_list[i].name, div_list[i].now, div_list[i].max))
@@ -344,12 +409,8 @@ def main():
 
     save_file.close()
 
-
-    # 재시작
-
-    re = input("다시 시작하려면 'restart'를 입력하십시오")
-    if re == "restart":
-        main()
+    print("성공적으로 파일이 저장되었습니다. (" + nowdate.strftime("%y%m%d_%H%M%S") + ".txt" + ")")
+    print("저장위치 : " + storage_location)
 
 if __name__ == "__main__":
     main()
