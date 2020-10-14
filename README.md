@@ -1,6 +1,6 @@
 # JG
 ### All codes in Developer_JG
 
-####LICENCE
+#### LICENCE
  * Creative Commons License. 4.0 (CCL 4.0)
- *  - Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
+ - Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
