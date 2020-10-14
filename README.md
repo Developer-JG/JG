@@ -7,4 +7,4 @@
  * Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)
 
 ---
-** Written by JG in Seoul
+ * Written by JG in Seoul
