@@ -1,7 +1,3 @@
-def stop_def(object_number):
-    while True:
-        input("program is stopped ({0})".format(object_number))
-
 def prime_number_def(prime_number, object_number):
     for i in range(2, object_number):
         prime_number_plag = 0
@@ -26,7 +22,7 @@ def calculate_def(prime_number_list, object_number):
                 break_plag =+ 1
 
     if break_plag == 0:
-        stop_def(object_number)
+        input("program is stopped ({0})".format(object_number))
 
 def main():
     print("Goldbach_Conjecture\n")

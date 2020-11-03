@@ -6,7 +6,7 @@ def calculate_def(object_number, n):
 
             if i ** n + j ** n == object_number ** n:
                 print("{0} ** {1} + {2} ** {1} = {3} ** {1}".format(i, n, j, object_number))
-                input("success!")
+                input("program is stopped ({0})".format(object_number))
 
 def main():
     print("Fermat's Last Theorem\n")
