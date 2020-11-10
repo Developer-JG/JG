@@ -14,6 +14,7 @@ A large-scale fantasy game that is currently stalled.
 
 
 - School festivals and simple fun
+
 Programs designed to experience activities and
 improve performance of festival booths
 
@@ -27,6 +28,7 @@ up or down game
 
 
 - test
+
 tests conducted for various challenges
 
 '''
