@@ -1,6 +1,5 @@
 # JG
 ### All codes in Developer_JG
-[![python3.6]]
 
 ### 2019
 ---
@@ -8,8 +7,7 @@
 ## project
 
 - The random_number project
-
-The first project, a program that helps you learn from simple addition to difficult operations.
+* The first project, a program that helps you learn from simple addition to difficult operations.
 
 
 - The 7poker_game project
