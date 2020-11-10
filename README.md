@@ -1,6 +1,7 @@
 # JG
 ### All codes in Developer_JG
 
+
 ### 2019
 ---
 
@@ -19,6 +20,12 @@ Second project, a seven-poker game with only basic conditional statements.
 - The basillisk project
 
 A large-scale fantasy game that is currently stalled.
+
+
+
+
+
+
 
 ## Short project
 
