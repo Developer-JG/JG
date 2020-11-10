@@ -1,8 +1,10 @@
 # JG
 ### All codes in Developer_JG
 
-## 2019
+### 2019
 ---
+
+## project
 
 - The random_number project
 
@@ -18,7 +20,7 @@ Second project, a seven-poker game with only basic conditional statements.
 
 A large-scale fantasy game that is currently stalled.
 
-
+## Short project
 
 - School festivals and simple fun
 
