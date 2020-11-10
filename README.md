@@ -19,12 +19,6 @@ Second project, a seven-poker game with only basic conditional statements.
 
 A large-scale fantasy game that is currently stalled.
 
-
-
-
-
-
-
 ## Short project
 
 - School festivals and simple fun
@@ -40,8 +34,6 @@ roulette
 up or down game
 '''
 
-
-
 - test
 
 tests conducted for various challenges
@@ -51,7 +43,6 @@ memory
 modul
 music
 '''
-
 
 ---
  * Written by JG in Seoul
