@@ -83,5 +83,11 @@ up or down game
 
 To Be Continued
 
+# Licence
+
+ Creative Commons Licence 4.0
+ Attribution-NonCommercial-ShareAlike 4.0 International
+ 
 ---
+ 
  Written by JG in Seoul
