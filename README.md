@@ -85,7 +85,7 @@ To Be Continued
 
 # Licence
 
- Creative Commons Licence 4.0 Attribution-NonCommercial-ShareAlike 4.0 International
+ Creative Commons Licence Attribution-NonCommercial-ShareAlike 4.0 International
  
 ---
  
