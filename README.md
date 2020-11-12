@@ -3,8 +3,7 @@
 
 It is a repository where all code that is being developed or completed is uploaded.
 
-### 2019
----
+# 2019
 
 ## project
 
@@ -46,8 +45,7 @@ up or down game
  music
   ```
 
-### 2020
----
+# 2020
  
 ## project
 
@@ -81,10 +79,9 @@ up or down game
 
   A program that recklessly tries to The Fermat's Last Theorem.
   
-### 2021
----
+# 2021
 
 To Be Continued
 
 ---
- * Written by JG in Seoul
+ Written by JG in Seoul
