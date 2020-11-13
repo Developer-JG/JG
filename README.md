@@ -63,7 +63,7 @@ It is a repository where all code that is being developed or completed is upload
   up or down game
   ```
 
-*  test
+* test
 
   tests conducted for various challenges.
 
