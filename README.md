@@ -1,27 +1,26 @@
 # JG
-### All codes in Developer_JG
+## All codes in Developer_JG
 
 It is a repository where all code that is being developed or completed is uploaded.
 
-# 2019
+## 2019
 
-## project
+### project
 
- * The random_number project
+* The random_number project
 
   The first project, a program that helps you learn from simple addition to difficult operations.
 
-
- * The 7poker_game project
+* The 7poker_game project
 
   Second project, a seven-poker game with only basic conditional statements.
  
- * The basillisk project
+* The basillisk project
 
   A large-scale fantasy game that is currently stalled.
   
   ```
-  [History]
+  [History](basillisk project)
   
   October
   ————— idle —————
@@ -47,9 +46,9 @@ It is a repository where all code that is being developed or completed is upload
   15 basilisk db_beta 20 (1.5)
   ```
 
-## Short project
+### Short project
 
- * School festivals and simple fun
+* School festivals and simple fun
 
   Programs designed to experience activities and
   improve performance of festival booths.
@@ -62,7 +61,7 @@ It is a repository where all code that is being developed or completed is upload
   up or down game
   ```
 
- *  test
+*  test
 
   tests conducted for various challenges.
 
@@ -72,16 +71,16 @@ It is a repository where all code that is being developed or completed is upload
  music
   ```
 
-# 2020
+## 2020
  
-## project
+### project
 
 * The NewAge_game project
 
   rename basillisk, including numerous updates.
   
   ```
-  [History]
+  [History](NewAge_game project)
   
   January
   04 restart (planning_1) (3)
@@ -142,7 +141,7 @@ It is a repository where all code that is being developed or completed is upload
   Second fantasy, medium-sized RPG with the theme of martial arts.
   
   ```
-  [History]
+  [History](Martial_Arts_game project)
   
   2020
 
@@ -171,7 +170,7 @@ It is a repository where all code that is being developed or completed is upload
   Ai, algorithms similar to real major artificial intelligence.
 
   ```
-  [History]
+  [History](Artificial_intellogence TRIA project)
   
   2020
 
@@ -196,7 +195,7 @@ It is a repository where all code that is being developed or completed is upload
   17 official site_3 (2)
   ```
   
-## Short project
+### Short project
 
 * The Quantum Key Distribution [BB84]
 
@@ -214,11 +213,11 @@ It is a repository where all code that is being developed or completed is upload
 
   A program that recklessly tries to The Fermat's Last Theorem.
   
-# 2021
+## 2021
 
 To Be Continued
 
-# Licence
+## Licence
 
  Creative Commons Licence Attribution-NonCommercial-ShareAlike 4.0 International
  
