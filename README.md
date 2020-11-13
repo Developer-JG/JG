@@ -1,7 +1,9 @@
 # JG
-## All codes in Developer_JG
+#### All codes in Developer_JG
 
 It is a repository where all code that is being developed or completed is uploaded.
+
+---
 
 ## 2019
 
@@ -70,6 +72,8 @@ It is a repository where all code that is being developed or completed is upload
  modul
  music
   ```
+
+---
 
 ## 2020
  
@@ -212,14 +216,17 @@ It is a repository where all code that is being developed or completed is upload
 * The Fermat's Last Theorem
 
   A program that recklessly tries to The Fermat's Last Theorem.
-  
+
+---
+
 ## 2021
 
 To Be Continued
 
 ## Licence
 
- Creative Commons Licence Attribution-NonCommercial-ShareAlike 4.0 International
+ **Creative Commons Licence.**  
+ *Attribution-NonCommercial-ShareAlike 4.0 International*
  
 ---
  
