@@ -67,11 +67,11 @@ It is a repository where all code that is being developed or completed is upload
 
   tests conducted for various challenges.
 
- ```
- memory
- modul
- music
- ```
+  ```
+  memory
+  modul
+  music
+  ```
 
 ---
 
@@ -222,6 +222,8 @@ It is a repository where all code that is being developed or completed is upload
 ## 2021
 
 To Be Continued
+
+---
 
 ## Licence
 
