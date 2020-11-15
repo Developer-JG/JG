@@ -7,7 +7,7 @@ It is a repository where all code that is being developed or completed is upload
 
 ## 2019
 
-### project
+### 1. project
 
 * The random_number project
 
@@ -48,7 +48,7 @@ It is a repository where all code that is being developed or completed is upload
   15 basilisk db_beta 20 (1.5)
   ```
 
-### Short project
+### 2. Short project
 
 * School festivals and simple fun
 
@@ -77,7 +77,7 @@ It is a repository where all code that is being developed or completed is upload
 
 ## 2020
  
-### project
+### 1. project
 
 * The NewAge_game project
 
@@ -199,7 +199,7 @@ It is a repository where all code that is being developed or completed is upload
   17 official site_3 (2)
   ```
   
-### Short project
+### 2. Short project
 
 * The Quantum Key Distribution [BB84]
 
