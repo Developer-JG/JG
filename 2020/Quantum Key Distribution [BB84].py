@@ -3,7 +3,7 @@ from random import randint
 print("Quantum Key Distribution project [BB84] / 양자 키 분배 프로젝트 [BB84]\n")
 input("Enter to start quantum key distribution / 양자 키 분배를 시작하려면 엔터")
 
-bit = 36
+bit = 5
 
 def Alice(bit, Alice_random_bit, Alice_random_sending_basis, Photon_polarization_Alice_sends, Shared_secret_key, Shared_secret_key_num):
     print("\n\n\n[Alice / 통신 과정의 첫 번째 당사자]\n")
@@ -43,7 +43,7 @@ def Alice_Public_discussion_of_basis(Alice_random_bit, Shared_secret_key, Shared
         print("\n\nErrors in key / 생성된 비밀키에 대한 무결성 검증\n")
         num, eavesdropper = 0, 0
         for i in Shared_secret_key_num:
-            print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i, Alice_random_bit[i]))
+            print("{0}th Alice's random bit / {0}번째로 앨리스가 생성한 비트 : {1}".format(i + 1, Alice_random_bit[i]))
             print("{0}th Shared secret key / {0}번째로 생성된 비밀키 : {1}\n".format(num + 1, Shared_secret_key[num]))
             if int(Alice_random_bit[i]) != int(Shared_secret_key[num]):
                 eavesdropper += 1
@@ -194,8 +194,6 @@ def main():
 
         d_r_repeating += 1
         d_repeating -= 1
-
-        print('\nfound / 발견됨 : {0}, not found / 발견되지 않음 : {1}'.format(no, yes))
 
     input()
     main()
