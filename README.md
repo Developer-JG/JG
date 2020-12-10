@@ -198,6 +198,23 @@ It is a repository where all code that is being developed or completed is upload
   16 official site_2 (6)
   17 official site_3 (2)
   ```
+
+* strengthening_of_the_sword
+
+  Made of Python, a hugely popular flash game.
+  
+  ```
+  [History](strengthening_of_the_sword)
+  
+  2020
+  
+  December
+  06 0.1 (3)
+  07 0.2 (1)
+     0.3 (1)
+  08 0.4 (1)
+  10 0.5 (1)
+  ```
   
 ### 2. Short project
 
