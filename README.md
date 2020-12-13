@@ -217,6 +217,7 @@ It is a repository where all code that is being developed or completed is upload
   11 0.6 (1)
      0.7 (1)
   12 0.8 (2)
+  13 1.0.0 (1.3)
   ```
   
 ### 2. Short project
