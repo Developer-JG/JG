@@ -244,6 +244,23 @@ It is a repository where all code that is being developed or completed is upload
 
 ## 2021
 
+### 1. project
+
+* vending machine
+
+  Made from a vending machine and a collection of additional things.
+  
+  ```
+  [History](vending machine)
+  
+  2021
+  
+  January
+  03 v.1 (1)
+  ```
+
+### 2. Short project
+
 ~~To Be Continued~~
 
 ---
