@@ -257,7 +257,6 @@ It is a repository where all code that is being developed or completed is upload
   
   January
   03 v.1 (1)
-  
   ```
 
 ### 2. Short project
