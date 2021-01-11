@@ -246,24 +246,16 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 1. project
 
-* vending machine
+* Apollo 13 project (Project Name : Not confirmed)
 
-  Made from a vending machine and a collection of additional things.
-  
-  ```
-  [History](vending machine)
-  
-  2021
-  
-  January
-  03 v.1 (1)
-  04 v.2 (0.3)
-  07 v.3 (0.3)
-  ```
+Historical The NewAge_game project Recovery Mode
 
 ### 2. Short project
 
-~~To Be Continued~~
+* vending machine
+
+  Made from a vending machine and a collection of additional things.   
+  [End of development (reason: incorporated into Apollo 13 project)]
 
 ---
 
