@@ -1955,5 +1955,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# https://cafe.naver.com/bjcrocodile/3275675
