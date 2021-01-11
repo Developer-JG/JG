@@ -250,6 +250,15 @@ It is a repository where all code that is being developed or completed is upload
 
 Historical 'The NewAge_game project' Recovery Mode
 
+  ```
+  [History](No_name)
+  
+  2021
+  
+  January
+  12 No_name(v.47) (2)
+  ```
+
 ### 2. Short project
 
 * vending machine
