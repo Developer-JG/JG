@@ -248,14 +248,14 @@ It is a repository where all code that is being developed or completed is upload
 
 * Apollo 13 project (Project Name : Not confirmed)
 
-Historical The NewAge_game project Recovery Mode
+Historical 'The NewAge_game project' Recovery Mode
 
 ### 2. Short project
 
 * vending machine
 
   Made from a vending machine and a collection of additional things.   
-  [End of development (reason: incorporated into Apollo 13 project)]
+  |End of development (reason: incorporated into Apollo 13 project)|
 
 ---
 
