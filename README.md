@@ -137,7 +137,7 @@ It is a repository where all code that is being developed or completed is upload
   26 rename Git Hub (0.2)
 
   May
-  31 restart (New_Age (v.46)) (1)
+  31 some modifications (New_Age (v.46)) (1)
   ```
   
 * The Martial_Arts_game project
@@ -249,6 +249,15 @@ It is a repository where all code that is being developed or completed is upload
 * Apollo 13 project (Project Name : Not confirmed)
 
 Historical 'The NewAge_game project' Recovery Mode
+
+  ```
+  [History](No_name)
+  
+  2021
+  
+  January
+  12 restart (No_name(v.47)) (2)
+  ```
 
 ### 2. Short project
 
