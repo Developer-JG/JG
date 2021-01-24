@@ -267,6 +267,7 @@ Historical 'The NewAge_game project' Recovery Mode
   21 No_name (v.55) (1.3)
   22 No_name (v.56) (2)
   23 No_name (v.57) (2.1)
+  25 No_name (v.58) (1)
   ```
 
 ### 2. Short project
