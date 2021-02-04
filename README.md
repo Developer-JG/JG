@@ -75,6 +75,8 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 3. Updated project
 
+**Started_year :(**
+
 ---
 
 ## 2020
@@ -250,6 +252,8 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 1. project
 
+  **Not yet :D**
+
 ### 2. Short project
 
 * vending machine
@@ -265,7 +269,7 @@ It is a repository where all code that is being developed or completed is upload
 
 * Apollo 13 project (Project Name : Not confirmed)
 
-Historical 'The NewAge_game project' Recovery Mode
+  Historical 'The NewAge_game project' Recovery Mode
 
   ```
   [History](No_name)
@@ -298,6 +302,7 @@ Historical 'The NewAge_game project' Recovery Mode
   ```
 
 * strengthening_of_the_sword
+
   ```
   [History](strengthening_of_the_sword)
   
