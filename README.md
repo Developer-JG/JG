@@ -73,72 +73,13 @@ It is a repository where all code that is being developed or completed is upload
   music
   ```
 
+### 3. Updated project
+
 ---
 
 ## 2020
  
 ### 1. project
-
-* The NewAge_game project
-
-  rename basillisk, including numerous updates.
-  
-  ```
-  [History](NewAge_game project)
-  
-  January
-  04 restart (planning_1) (3)
-  05 planning_2 (1.3)
-  06 flowchart fabrication (flowchart_1) (4.3)
-  07 flowchart_2 (0.1)
-  07 planning_3 (3)
-  08 New_Age (v.21)( (1.3)
-  08 pycharm / module operation (1)
-  ————— pycharm —————
-  08 New_Age (v.22) (1)
-  08 New_Age (v.23) (1.2)
-  09 New_Age (v.24) (0.45)
-  09 New_Age (v.25) (0.55)
-  10 New_Age (v.26) (1.4)
-  10 New_Age (v.27) (2.4)
-  11 map plan_1 (0.5)
-  12 map plan_2 (1)
-  13 map plan_3 (1.2)
-  13 New_Age (v.28) (0.35)
-  14 information retrieval (1.4)
-  15 New_Age (v.29) (1)
-  16 information retrieval (1)
-  16 New_Age (v.30) (4)
-  17 New_Age (v.31) (1.3)
-  17 New_Age (v.32) (1.1)
-  20 Git Hub setting (1)
-  ——-—— Git Hub —————
-  23 New_Age (v.33) (1.4)
-  24 New_Age (v.34) (1.3)
-  25 New_Age (v.35) (0.4)
-  31 New_Age (v.36) (1.3)
-
-  February
-  01 map plan_4 (1)
-  01 map plan_5 (1.3)
-  02 map plan_6 (3)
-  02 New_Age (v.37) (1.1)
-  03 New_Age (v.38) (1)
-  03 New_Age (v.39) (1)
-  04 New_Age (v.40) (0.5)
-  06 Quest making_1 (0.5)
-  06 New_Age (v.41) (0.2)
-  07 New_Age (v.42) (0.5)
-  07 Quest making_2 (0.1)
-  07 New_Age (v.43) (0.5)
-  08 New_Age (v.44) (0.5)
-  08 New_Age (v.44_1) (0.3)
-  12 New_Age (v.45) (1.1)
-  26 rename Git Hub (0.2)
-
-  May
-  31 some modifications (New_Age (v.46)) (1)
-  ```
   
 * The Martial_Arts_game project
 
@@ -239,12 +180,88 @@ It is a repository where all code that is being developed or completed is upload
 * The Fermat's Last Theorem
 
   A program that recklessly tries to The Fermat's Last Theorem.
+  
+### 3. Updated project
+
+* The NewAge_game project
+
+  rename basillisk, including numerous updates.
+  
+  ```
+  [History](NewAge_game project)
+  
+  January
+  04 restart (planning_1) (3)
+  05 planning_2 (1.3)
+  06 flowchart fabrication (flowchart_1) (4.3)
+  07 flowchart_2 (0.1)
+  07 planning_3 (3)
+  08 New_Age (v.21)( (1.3)
+  08 pycharm / module operation (1)
+  ————— pycharm —————
+  08 New_Age (v.22) (1)
+  08 New_Age (v.23) (1.2)
+  09 New_Age (v.24) (0.45)
+  09 New_Age (v.25) (0.55)
+  10 New_Age (v.26) (1.4)
+  10 New_Age (v.27) (2.4)
+  11 map plan_1 (0.5)
+  12 map plan_2 (1)
+  13 map plan_3 (1.2)
+  13 New_Age (v.28) (0.35)
+  14 information retrieval (1.4)
+  15 New_Age (v.29) (1)
+  16 information retrieval (1)
+  16 New_Age (v.30) (4)
+  17 New_Age (v.31) (1.3)
+  17 New_Age (v.32) (1.1)
+  20 Git Hub setting (1)
+  ——-—— Git Hub —————
+  23 New_Age (v.33) (1.4)
+  24 New_Age (v.34) (1.3)
+  25 New_Age (v.35) (0.4)
+  31 New_Age (v.36) (1.3)
+
+  February
+  01 map plan_4 (1)
+  01 map plan_5 (1.3)
+  02 map plan_6 (3)
+  02 New_Age (v.37) (1.1)
+  03 New_Age (v.38) (1)
+  03 New_Age (v.39) (1)
+  04 New_Age (v.40) (0.5)
+  06 Quest making_1 (0.5)
+  06 New_Age (v.41) (0.2)
+  07 New_Age (v.42) (0.5)
+  07 Quest making_2 (0.1)
+  07 New_Age (v.43) (0.5)
+  08 New_Age (v.44) (0.5)
+  08 New_Age (v.44_1) (0.3)
+  12 New_Age (v.45) (1.1)
+  26 rename Git Hub (0.2)
+
+  May
+  31 some modifications (New_Age (v.46)) (1)
+  ```
 
 ---
 
 ## 2021
 
 ### 1. project
+
+### 2. Short project
+
+* vending machine
+
+  Made from a vending machine and a collection of additional things.   
+  |End of development (reason: incorporated into Apollo 13 project)|
+  
+* Korean-style 6/45 Lotto
+
+  Program of Winning Probability of Korean-style 6/45 Lotto
+  
+### 3. Updated project
 
 * Apollo 13 project (Project Name : Not confirmed)
 
@@ -280,12 +297,17 @@ Historical 'The NewAge_game project' Recovery Mode
   02 No_name (v.66) (1.3)
   ```
 
-### 2. Short project
-
-* vending machine
-
-  Made from a vending machine and a collection of additional things.   
-  |End of development (reason: incorporated into Apollo 13 project)|
+* strengthening_of_the_sword
+  ```
+  [History](strengthening_of_the_sword)
+  
+  2021
+  
+  February
+  
+  03 1.0.3 (0.1)
+  
+  ```
 
 ---
 
