@@ -75,7 +75,7 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 3. Updated project
 
-**Started_year :(**
+* **Started_year :(**
 
 ---
 
@@ -252,7 +252,7 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 1. project
 
-  **Not yet :D**
+* **Not yet :D**
 
 ### 2. Short project
 
