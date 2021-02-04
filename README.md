@@ -309,7 +309,6 @@ It is a repository where all code that is being developed or completed is upload
   2021
   
   February
-  
   03 1.0.3 (0.1)
   
   ```
