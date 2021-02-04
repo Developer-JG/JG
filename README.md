@@ -310,7 +310,6 @@ It is a repository where all code that is being developed or completed is upload
   
   February
   03 1.0.3 (0.1)
-  
   ```
 
 ---
