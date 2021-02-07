@@ -73,10 +73,6 @@ It is a repository where all code that is being developed or completed is upload
   music
   ```
 
-### 3. Updated project
-
-* **Started_year :(**
-
 ---
 
 ## 2020
