@@ -11,13 +11,17 @@ count = 0
 
 one, two, three, four, five = 0, 0, 0, 0, 0
 
+# 반복실행
 while run_mod == 1 or run_mod == 2:
     count = count + 1
     plus_number = 0
+
+    # 번호 추첨
     while True:
         standard, lotto_1, lotto_2, lotto_3, lotto_4, lotto_5 = [], [], [], [], [], []
         lotto_list = [standard, lotto_1, lotto_2, lotto_3, lotto_4, lotto_5]
 
+        # 번호 선택
         for i in range(0, 6):
             lotto = random.sample(range(1, 46), 6)
             lotto_list[i] = lotto
@@ -32,6 +36,7 @@ while run_mod == 1 or run_mod == 2:
                     if plag == 0:
                         break
 
+        # 중복 번호 확인
         plag, plag_1 = 0, 0
 
         for i in range(1, 6):
@@ -46,6 +51,7 @@ while run_mod == 1 or run_mod == 2:
         if plag_1 == 0:
             break
 
+    # 번호 출력
     if print_mod == 1:
         print("{0:-^30}".format(" 선택 번호 "))
         for i in range(1, 6):
@@ -61,6 +67,7 @@ while run_mod == 1 or run_mod == 2:
 
         print("\n" * 3)
 
+    # 일치 확인
     for i in range(1, 6):
         plag = 0
         for j in range(0, 5):
