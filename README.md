@@ -295,6 +295,7 @@ It is a repository where all code that is being developed or completed is upload
   
   February
   02 No_name (v.66) (1.3)
+  12 No_name (v.67) (0.1)
   ```
 
 * strengthening_of_the_sword
@@ -306,6 +307,7 @@ It is a repository where all code that is being developed or completed is upload
   
   February
   03 1.0.3 (0.1)
+  12 1.0.4 (0.1)
   ```
 
 ---
