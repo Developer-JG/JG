@@ -1,4 +1,9 @@
 # JG
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![python3.6](https://img.shields.io/badge/python-3.6.8-brightgreen)
+![python3.7](https://img.shields.io/badge/python-3.7.2-brightgreen)
+![license](https://img.shields.io/badge/license-CC--BY--NC--SA-orange)
+
 #### All codes in Developer_JG
 
 It is a repository where all code that is being developed or completed is uploaded.
