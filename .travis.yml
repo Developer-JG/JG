@@ -1,5 +1,5 @@
 dist: xenial
-sudo: false
+sudo: True
 language: python
 
 # Travis config is driven by the tox.ini file.
