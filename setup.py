@@ -1,14 +1,16 @@
-from setuptools import setup
+import os
+import sys
+from setuptools import setup, find_packages
 
-about = {}
-with open('pur/__about__.py') as f:
-    exec(f.read(), about)
+install_requires = ['PyYAML']
 
-packages = [
-    about['JG'],
-]
+version = sys.version_info[:2]
 
-install_requires = [x.strip() for x in open('requirements.txt').readlines()]
+if version < (2,7) or (3,0) <= version <= (3,1):
+    install_requires += ['argparse']
+
+this_dir = os.path.dirname(__file__)
+long_description = "\n" + open(os.path.join(this_dir, 'README.rst')).read()
 
 setup(
     name=about['JG'],
