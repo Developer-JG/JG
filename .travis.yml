@@ -10,11 +10,11 @@ python:
   - pypy3
 
 install:
-  - pip install wheel codecov coverage
-  - python setup.py bdist_wheel
-  - pip install ./dist/tox_travis-*.whl
-script: tox --installpkg ./dist/tox_travis-*.whl
-after_success: coverage combine && codecov
+  - pip install tox
+script:
+  - tox
+after_success:
+    - coveralls
 
 stages:
   - test
