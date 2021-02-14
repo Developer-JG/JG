@@ -6,11 +6,11 @@ install_requires = ['PyYAML']
 
 version = sys.version_info[:2]
 
- this_dir = os.path.dirname(__file__)
- long_description = "\n" + open(os.path.join(this_dir, 'README.md')).read()
+this_dir = os.path.dirname(__file__)
+long_description = "\n" + open(os.path.join(this_dir, 'README.md')).read()
 
- setup(
-     name='JG',
+setup(
+    name='JG',
     version='0',
     description=('Convert between Travis-CI `.travis.yml` files and Tox `tox.ini` files'),
     long_description=long_description,
