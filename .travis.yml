@@ -10,5 +10,7 @@ matrix:
 install:
     - travis_retry pip install -r dev-requirements.txt
     - travis_retry pip install coveralls
+script:
+    - echo "TODO"
 after_success:
     - coveralls
