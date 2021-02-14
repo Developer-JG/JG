@@ -1,10 +1,10 @@
 import os
 import sys
 from setuptools import setup, find_packages
+
 install_requires = ['PyYAML']
+
 version = sys.version_info[:2]
-if version < (2,7) or (3,0) <= version <= (3,1):
-     install_requires += ['argparse']
 
  this_dir = os.path.dirname(__file__)
  long_description = "\n" + open(os.path.join(this_dir, 'README.md')).read()
