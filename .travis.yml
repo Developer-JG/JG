@@ -1,14 +1,37 @@
-sudo: false
+dist: xenial
 language: python
-python:
-  - "2.7"
-  - "3.4"
-env:
-  - DJANGO="1.7"
-  - DJANGO="1.8"
-matrix:
-  include:
-    - os: osx
-      language: generic
-install: pip install tox-travis
+cache: pip
+
+before_script:
+  - pip install tox
+
 script: tox
+
+notifications:
+  email: false
+
+services:
+  - mysql
+
+before_install:
+  - mysql -u root -e "CREATE USER 'old'@'localhost' IDENTIFIED BY 'demo';"
+  - mysql -u root -e 'CREATE DATABASE oldtests DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_bin;'
+  - mysql -u root -e "GRANT ALL PRIVILEGES ON oldtests.* TO 'old'@'localhost';"
+  - mysql -u root -e 'CREATE DATABASE oldtests2 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_bin;'
+  - mysql -u root -e "GRANT ALL PRIVILEGES ON oldtests2.* TO 'old'@'localhost';"
+
+matrix:
+  fast_finish: true
+  include:
+
+    - python: "3.5"
+      env: TOXENV=py35
+
+    - python: "3.6"
+      env: TOXENV=py36
+
+    - python: "3.5"
+      env: TOXENV=py35-pylint
+
+    - python: "3.6"
+      env: TOXENV=py36-pylint
