@@ -13,19 +13,24 @@ this_dir = os.path.dirname(__file__)
 long_description = "\n" + open(os.path.join(this_dir, 'README.rst')).read()
 
 setup(
-    name=about['JG'],
-    version=about['1.0'],
-    license=about['CC-BY-NC-SA],
-    description=about['All codes in Developer_JG'],
-    long_description=open('README.rst').read(),
-    author=about['jeonggyu_hwang'],
-    author_email=about['h5638880@naver.com'],
-    url=about['https://github.com/Developer-JG/JG'],
-    packages=packages,
-    include_package_data=True,
+    name='JG',
+    version='0',
+    description=('Convert between Travis-CI `.travis.yml` files and Tox `tox.ini` files'),
+    long_description=long_description,
+    keywords='tox, travis, continuous integration, CI',
+    author='jeonggyu_hwang',
+    author_email='h5638880@naver.com',
+    url='https://github.com/Developer-JG/JG',
+    packages=find_packages(),
     zip_safe=False,
-    platforms='any',
     install_requires=install_requires,
+    test_suite='JG.tests',
+    entry_points = """\
+      [console_scripts]
+      panci = panci.cli:main
+      panci-tox-quickstart = panci.toxquickstart:main
+    """,
+    license='CC-BY-NC-SA',
     classifiers=[
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
