@@ -1,24 +1,23 @@
 dist: xenial
+sudo: false
 language: python
-cache: pip
 
-before_script:
-  - pip install tox
+# Travis config is driven by the tox.ini file.
 
-script: tox
+# Here we just specify:
+# 1. The Python versions to run - it will start a CI server for each, and run all the tox environments
+#    that use that Python. So in Travis we are running both in parallel (one server per Python version)
+#    and in series (each server runs all the Django envs for that version of Python).
 
-matrix:
-  fast_finish: true
-  include:
+python:
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
 
-    - python: "3.5"
-      env: TOXENV=py35
+install:
+  - pip install tox-travis
 
-    - python: "3.6"
-      env: TOXENV=py36
-
-    - python: "3.5"
-      env: TOXENV=py35-pylint
-
-    - python: "3.6"
-      env: TOXENV=py36-pylint
+script:
+  # Run against all the Python interpreter and Django versions specified in the tox.ini file.
+  - tox
