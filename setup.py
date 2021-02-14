@@ -1,7 +1,7 @@
 from setuptools import setup
 
 about = {}
-with open('pur/JG.py') as f:
+with open('pur/__about__.py') as f:
     exec(f.read(), about)
 
 packages = [
