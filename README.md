@@ -1,4 +1,4 @@
-# JG-
+# JG
 [![Build Status](https://travis-ci.com/Developer-JG/JG.svg?branch=master)](https://travis-ci.com/Developer-JG/JG)
 ![python3.6](https://img.shields.io/badge/python-3.6.8-brightgreen)
 ![python3.7](https://img.shields.io/badge/python-3.7.2-brightgreen)
