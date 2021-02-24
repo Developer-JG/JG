@@ -266,6 +266,14 @@ It is a repository where all code that is being developed or completed is upload
 
   Program of Winning Probability of Korean-style 6/45 Lotto
   
+* machine with a win
+
+  This program surely has a win. If you want to win, it will take about 35 years.
+  
+* Time converter
+
+  Programs that can conveniently change time units
+  
 ### 3. Updated project
 
 * Apollo 13 project (Project Name : Not confirmed)
