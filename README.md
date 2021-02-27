@@ -268,7 +268,12 @@ It is a repository where all code that is being developed or completed is upload
   
 * Victory certainly exists
 
-  This program surely has a win. If you want to win, it will take about 35 years.
+  This program surely has a win. If you want to win, it will take about 1 century (100 years).
+  
+  ```
+  (2 ** 30) * 0.1 * 30 = 3,221,225,472
+  3,221,225,472(s) = 53,687,091.2(m) = 894,784.853(h) = 37,282.702(d) = 102.1443(y)
+  ```
   
 * Time converter
 
