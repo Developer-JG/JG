@@ -264,7 +264,7 @@ It is a repository where all code that is being developed or completed is upload
   
 * Korean-style 6/45 Lotto
 
-  Program of Winning Probability of Korean-style 6/45 Lotto
+  Program of Winning Probability of Korean-style 6/45 Lotto.
   
 * Victory certainly exists
 
@@ -277,13 +277,17 @@ It is a repository where all code that is being developed or completed is upload
   
 * Time converter
 
-  Programs that can conveniently change time units
+  Programs that can conveniently change time units.
+  
+* Monty Hall problem
+
+  Monty Hall problem Direct Attestation Program.
   
 ### 3. Updated project
 
 * Apollo 13 project (Project Name : Not confirmed)
 
-  Historical 'The NewAge_game project' Recovery Mode
+  Historical 'The NewAge_game project' Recovery Mode.
 
   ```
   [History](No_name)
