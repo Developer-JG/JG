@@ -11,15 +11,18 @@ count = 0
 
 one, two, three, four, five = 0, 0, 0, 0, 0
 
+
 # 반복실행
 while run_mod == 1 or run_mod == 2:
     count = count + 1
     plus_number = 0
 
+
     # 번호 추첨
     while True:
         standard, lotto_1, lotto_2, lotto_3, lotto_4, lotto_5 = [], [], [], [], [], []
         lotto_list = [standard, lotto_1, lotto_2, lotto_3, lotto_4, lotto_5]
+
 
         # 번호 선택
         for i in range(0, 6):
@@ -36,20 +39,21 @@ while run_mod == 1 or run_mod == 2:
                     if plag == 0:
                         break
 
+
         # 중복 번호 확인
         plag, plag_1 = 0, 0
 
         for i in range(1, 6):
-            for j in range(0, 4):
+            for j in range(1, 6):
+                for k in range(0, 6):
+                    if lotto_list[j][k] in lotto_list[i]:
+                        plag = plag + 1
+                    if plag == 6:
+                        plag_1 = plag_1 + 1
                 plag = 0
-                for k in range(0, 4):
-                    if i != j:
-                        if lotto_list[i][k] == lotto_list[j][k]:
-                            plag = plag + 1
-                if plag == 5:
-                    plag_1 = plag + 1
-        if plag_1 == 0:
+        if plag_1 == 5:
             break
+
 
     # 번호 출력
     if print_mod == 1:
@@ -66,6 +70,7 @@ while run_mod == 1 or run_mod == 2:
             input(" : ")
 
         print("\n" * 3)
+
 
     # 일치 확인
     for i in range(1, 6):
@@ -90,6 +95,7 @@ while run_mod == 1 or run_mod == 2:
             four = four + 1
             print(f"{count}회차 {four}번쨰 4등 당첨 ({round(four  /(count * 5), 10)})")
             # input()
+        elif plag == 3:
             five = five + 1
             print(f"{count}회차 {five}번쨰 5등 당첨 ({round(five  / (count * 5), 10)})")
             # input()
