@@ -75,29 +75,29 @@ while run_mod == 1 or run_mod == 2:
     # 일치 확인
     for i in range(1, 6):
         plag = 0
-        for j in range(0, 5):
+        for j in range(0, 6):
             if lotto_list[i][j] in lotto_list[0]:
                 plag = plag + 1
         if plag == 6:
             one = one + 1
-            print(f"{count}회차 {one}번쨰 1등 당첨 ({round(one  / (count * 5), 10)})")
+            print(f"{count}회차 {one}번째 1등 당첨 ({round(one  / (((count - 1) * 5) + (j + 1)), 10)}%)")
             input()
         elif plag == 5:
             if plus_number in lotto_list[i]:
                 two = two + 1
-                print(f"{count}회차 {two}번쨰 2등 당첨 ({round(two  / (count * 5), 10)})")
-                input()
+                print(f"{count}회차 {two}번째 2등 당첨 ({round(two  / (((count - 1) * 5) + (j + 1)), 10)}%)")
+                #input()
             else:
                 three = three + 1
-                print(f"{count}회차 {three}번쨰 3등 당첨 ({round(three  / (count * 5), 10)})")
-                input()
+                print(f"{count}회차 {three}번째 3등 당첨 ({round(three  / (((count - 1) * 5) + (j + 1)), 10)}%)")
+                #input()
         elif plag == 4:
             four = four + 1
-            print(f"{count}회차 {four}번쨰 4등 당첨 ({round(four  /(count * 5), 10)})")
+            print(f"{count}회차 {four}번째 4등 당첨 ({round(four  /(((count - 1) * 5) + (j + 1)), 10)}%)")
             # input()
         elif plag == 3:
             five = five + 1
-            print(f"{count}회차 {five}번쨰 5등 당첨 ({round(five  / (count * 5), 10)})")
+            print(f"{count}회차 {five}번째 5등 당첨 ({round(five  / (((count - 1) * 5) + (j + 1)), 10)}%)")
             # input()
 
     if stop == count:
