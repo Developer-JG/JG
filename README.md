@@ -10,9 +10,23 @@ It is a repository where all code that is being developed or completed is upload
 
 ---
 
-## 2019
+## Anchor
+* [2019](#chapter-2019)
+    * [project](#chapter-2019_project)
+    * [Short project](#chapter-2019_short)
+* [2020](#chapter-2020)
+    * [project](#chapter-2020_project)
+    * [Short project](#chapter-2020_short)
+    * [Updated project](#chapter-2020_updated)
+* [2021](#chapter-2021)
+    * [project](#chapter-2021_project)
+    * [Short project](#chapter-2021_short)
+    * [Updated project](#chapter-2021_updated)
+* [licence](#chapter-licence)
 
-### 1. project
+## 2019 <a id="chapter-2019"></a>
+
+### 1. project <a id="chapter-2019_project"></a>
 
 * The random_number project
 
@@ -53,7 +67,7 @@ It is a repository where all code that is being developed or completed is upload
   15 basilisk db_beta 20 (1.5)
   ```
 
-### 2. Short project
+### 2. Short project <a id="chapter-2019_short"></a>
 
 * School festivals and simple fun
 
@@ -80,9 +94,9 @@ It is a repository where all code that is being developed or completed is upload
 
 ---
 
-## 2020
+## 2020 <a id="chapter-2020"></a>
  
-### 1. project
+### 1. project <a id="chapter-2020_project"></a>
   
 * The Martial_Arts_game project
 
@@ -166,7 +180,7 @@ It is a repository where all code that is being developed or completed is upload
   17 1.0.2 (0.3)
   ```
   
-### 2. Short project
+### 2. Short project <a id="chapter-2020_short"></a>
 
 * The Quantum Key Distribution [BB84]
 
@@ -184,7 +198,7 @@ It is a repository where all code that is being developed or completed is upload
 
   A program that recklessly tries to The Fermat's Last Theorem.
   
-### 3. Updated project
+### 3. Updated project <a id="chapter-2020_updated"></a>
 
 * The NewAge_game project
 
@@ -249,13 +263,13 @@ It is a repository where all code that is being developed or completed is upload
 
 ---
 
-## 2021
+## 2021 <a id="chapter-2021"></a>
 
-### 1. project
+### 1. project <a id="chapter-2021_project"></a>
 
 * **Not yet :D**
 
-### 2. Short project
+### 2. Short project <a id="chapter-2021_short"></a>
 
 * vending machine
 
@@ -283,7 +297,7 @@ It is a repository where all code that is being developed or completed is upload
 
   Monty Hall problem Direct Attestation Program.
   
-### 3. Updated project
+### 3. Updated project <a id="chapter-2021_updated"></a>
 
 * Apollo 13 project (Project Name : Not confirmed)
 
@@ -334,7 +348,7 @@ It is a repository where all code that is being developed or completed is upload
 
 ---
 
-## Licence
+## Licence <a id="chapter-licence"></a>
 
  **Creative Commons Licence.**  
  *Attribution-NonCommercial-ShareAlike 4.0 International*
