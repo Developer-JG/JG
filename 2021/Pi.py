@@ -18,41 +18,117 @@ def prime_number(number):
     return True
 
 
+def Franciscus_Vieta(value):
+    value_1 = (2 ** (1 / 2))
+    try:
+        while True:
+            value_1 += (2 + value) ** 1 / 2
+            value_2 = value_1 / 2
+            value *= value_2
+            print("{:.256g}".format(value * (1 / 2)))
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
+
+
+def John_Wallis(value):
+    n = 1
+    try:
+        while True:
+            if value == 0:
+                value += ((2 * n) / ((2 * n) - 1)) * ((2 * n) / ((2 * n) + 1))
+            else:
+                value *= ((2 * n) / ((2 * n) - 1)) * ((2 * n) / ((2 * n) + 1))
+            print("{:.256g}".format(value * 2))
+            n += 1
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
+
+
+def James_Gregory_and_Leibniz(value):
+    n = 0
+    try:
+        while True:
+            value += ((-1) ** n) / ((2 * n) + 1)
+            print("{:.256g}".format(value * 4))
+            n += 1
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
+
+
+def John_Machin(value):
+    n = 1
+    try:
+        while True:
+            value += (((4 * ((-1) ** (n - 1))) / ((2 * n) - 1)) * ((1 / 5) ** ((2 * n) - 1))) - \
+                     (((-1) ** (n - 1)) / ((2 * n) - 1) * (1 / 239))
+            print("{:.256g}".format((value * 4)))
+            n += 1
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
+
+
+def Euler_1(value):
+    n = 1
+    try:
+        while True:
+            value += 1 / (n ** 2)
+            print("{:.256g}".format((value * 6) ** (1 / 2)))
+            n += 1
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
+
+
 def Euler_2(value):
     n = 0
-    while True:
-        try:
+    try:
+        while True:
             value += 1 / ((1 + 2 * n) ** 2)
             print("{:.256g}".format((value * 8) ** (1 / 2)))
             n += 1
-        except:
-            input("program is stoped")
-            print("\n" * 2)
-            main()
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
 
 
 def Euler_3(value):
     n = 1
-    while True:
-        try:
+    try:
+        while True:
             value += (((-1) ** (n + 1)) / (n ** 2))
             print("{:.256g}".format((value * 12) ** (1 / 2)))
             n += 1
-        except:
-            input("program is stoped")
-            print("\n" * 2)
-            main()
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
 
 
 def Euler_prim(value):
     n = 2
-    while True:
-        try:
-            if prime_number(n):
-                value *= (n ** 2) / ((n ** 2) - 1)
-        except:
-            pass
-        print(value)
+    try:
+        while True:
+            if prime_number(n) == True:
+                if  value == 0:
+                    value += ((n ** 2) / ((n ** 2) - 1))
+                else:
+                    value *= ((n ** 2) / ((n ** 2) - 1))
+                print("{:.256g}".format(value))
+            n += 1
+    except:
+        input("program is stoped")
+        print("\n" * 2)
+        main()
 
 
 def Ramanujan(value):
@@ -73,14 +149,25 @@ def Ramanujan(value):
 
 def main():
     value = 0
-    sel = input(" : ")
+    while True:
+        sel = input(" : ")
 
-    if sel == '1':
-        Ramanujan(value)
-    elif sel == '2':
-        Euler_3(value)
-    elif sel == '3':
-        Euler_2(value)
+        if sel == 'John_Wallis':
+            John_Wallis(value)
+        elif sel == 'James_Gregory_and_Leibniz':
+            James_Gregory_and_Leibniz(value)
+        elif sel == 'John_Machin':
+            John_Machin(value)
+        elif sel == 'Euler_1':
+            Euler_1(value)
+        if sel == 'Euler_2':
+            Euler_2(value)
+        elif sel == 'Euler_3':
+            Euler_3(value)
+        elif sel == 'Euler_prim':
+            Euler_prim(value)
+        elif sel == 'Eamanujan':
+            Ramanujan(value)
 
 
 if __name__ == "__main__":
