@@ -166,7 +166,7 @@ def main():
             Euler_3(value)
         elif sel == 'Euler_prim':
             Euler_prim(value)
-        elif sel == 'Eamanujan':
+        elif sel == 'Ramanujan':
             Ramanujan(value)
 
 
