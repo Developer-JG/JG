@@ -297,6 +297,14 @@ It is a repository where all code that is being developed or completed is upload
 
   Monty Hall problem Direct Attestation Program.
   
+* Pi
+
+  Proof of sequence converging to py.
+  
+* calculator
+
+  Create a more comfortable, high-dimensional calculator
+  
 ### 3. Updated project <a id="chapter-2021_updated"></a>
 
 * Apollo 13 project (Project Name : Not confirmed)
