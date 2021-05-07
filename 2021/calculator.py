@@ -7,12 +7,13 @@ def factoriacl(number):
         result *= i
     return result
 
-
 def main():
     while True:
         all_sequence = 1
         number_sequence = 0
         operator_sequence = 0
+        parentheses_count = 0
+        open_parentheses_count = 0
         number_list = []
         operator_list = []
         list = []
@@ -56,7 +57,7 @@ def main():
             ans = input("= ")
             print("\n" * 1)
 
-            if ans != "=":
+            if ans != "=" and ans != "(" and ans != ")":
                 plag = 0
                 operator_separation = "-"
                 number_separation = 0
@@ -105,11 +106,60 @@ def main():
                     else:
                         print("올바른 숫자를 입력하세요.")
 
-            elif ans == "=":
+            elif ans == "(":
                 if all_sequence % 2 == 0:
-                    print("숫자 뒤에 등호를 입력하여주십시오.")
+                    print("연산자 뒤에 여는 괄호를 입력하여 주십시오")
                 else:
-                    pass
+                    parentheses_count += 1
+                    open_parentheses_count += 1
+                    list.append(ans)
+
+            elif ans == ")":
+                if all_sequence % 2 != 0:
+                    print("숫자 뒤에 닫는 괄호를 입력하여 주십시오.")
+                else:
+                    if parentheses_count > 0:
+                        parentheses_count -= 1
+                        list.append(ans)
+                    else:
+                        print("여는 괄호를 먼저 입력하여 주십시오.")
+
+            elif ans == "=":
+                if all_sequence % 2 != 0:
+                    print("숫자 뒤에 등호를 입력하여 주십시오.")
+                else:
+                    if parentheses_count == 0:
+                        break
+                    else:
+                        print("괄호를 모두 닫아 완전한 식을 입력하여 주십시오.")
+
+        while open_parentheses_count != 0:
+            open_parentheses_list = []
+            close_parentheses_list = []
+            for i in range(len(list)):
+                j = list[i]
+                if j == "(":
+                    open_parentheses_list.append(i)
+                elif j == ")":
+                    close_parentheses_list.append(i)
+
+            close_parentheses_list.sort()
+            open_parentheses_list.sort(reverse=True)
+            parentheses_list = []
+            for i in range(len(open_parentheses_list)):
+                for j in range(len(list)):
+                    if open_parentheses_list[i] <= j <= close_parentheses_list[i]:
+                        parentheses_list.append(list[j - 1])
+                        del list[j - 1]
+
+            print(parentheses_list)
+            print(list)
+            input()
+            open_parentheses_count -= 1
+
 
 if __name__ == "__main__":
     main()
+
+# 리스트 아웃오브레인지 오류
+# 백스페이스
