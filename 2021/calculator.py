@@ -57,7 +57,7 @@ def main():
             ans = input("= ")
             print("\n" * 1)
 
-            if ans != "=" and ans != "(" and ans != ")":
+            if ans != "=" and ans != "(" and ans != ")" and ans != "b":
                 plag = 0
                 operator_separation = "-"
                 number_separation = 0
@@ -106,6 +106,14 @@ def main():
                     else:
                         print("올바른 숫자를 입력하세요.")
 
+            elif ans == "b":
+                del list[-1]
+                if all_sequence % 2 == 0:
+                    del number_list[-1]
+                else:
+                    del operator_list[-1]
+                all_sequence -= 1
+
             elif ans == "(":
                 if all_sequence % 2 == 0:
                     print("연산자 뒤에 여는 괄호를 입력하여 주십시오")
@@ -133,6 +141,18 @@ def main():
                     else:
                         print("괄호를 모두 닫아 완전한 식을 입력하여 주십시오.")
 
+
+
+        factorial_list = []
+        for i in range(len(list)):
+            if list[i] == "h":
+                factorial_list.append(i)
+
+        for i in factorial_list:
+            del list[i]
+            factorial_number = factoriacl(int(list[i - 1]))
+            list[i - 1] = factorial_number
+
         while open_parentheses_count != 0:
             open_parentheses_list = []
             close_parentheses_list = []
@@ -152,14 +172,10 @@ def main():
                         parentheses_list.append(list[j - 1])
                         del list[j - 1]
 
-            print(parentheses_list)
-            print(list)
-            input()
             open_parentheses_count -= 1
+
+        print(f"= {list}", end= ' ')
 
 
 if __name__ == "__main__":
     main()
-
-# 리스트 아웃오브레인지 오류
-# 백스페이스
