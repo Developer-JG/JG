@@ -141,18 +141,16 @@ def main():
                     else:
                         print("괄호를 모두 닫아 완전한 식을 입력하여 주십시오.")
 
-
-
-        factorial_list = []
+        # 팩토리얼
+        delete_count = 0
         for i in range(len(list)):
+            i -= delete_count
             if list[i] == "h":
-                factorial_list.append(i)
+                del list[i]
+                list[i - 1] = factoriacl(int(list[i - 1]))
+                delete_count += 1
 
-        for i in factorial_list:
-            del list[i]
-            factorial_number = factoriacl(int(list[i - 1]))
-            list[i - 1] = factorial_number
-
+        # 괄호
         while open_parentheses_count != 0:
             open_parentheses_list = []
             close_parentheses_list = []
@@ -164,17 +162,137 @@ def main():
                     close_parentheses_list.append(i)
 
             close_parentheses_list.sort()
-            open_parentheses_list.sort(reverse=True)
+            open_parentheses_list.sort(reverse = True)
             parentheses_list = []
+            delete_count = 0
             for i in range(len(open_parentheses_list)):
                 for j in range(len(list)):
-                    if open_parentheses_list[i] <= j <= close_parentheses_list[i]:
-                        parentheses_list.append(list[j - 1])
-                        del list[j - 1]
+                    j -= delete_count
+                    if open_parentheses_list[i] <= j <= (close_parentheses_list[i] - delete_count):
+                        parentheses_list.append(list[j])
+                        del list[j]
+                        delete_count += 1
+                del parentheses_list[0]
+                del parentheses_list[-1]
+
+                delete_count = 0
+                for i in range(len(parentheses_list)):
+                    i -= delete_count
+                    try:
+                        if parentheses_list[i] == "g" or parentheses_list[i] == "f":
+                            if parentheses_list[i] == "g":
+                                result = int(parentheses_list[i - 1]) % int(parentheses_list[i + 1])
+                            elif parentheses_list[i] == "f":
+                                result = int(parentheses_list[i - 1]) // int(parentheses_list[i + 1])
+                            parentheses_list[i - 1] = result
+                            del parentheses_list[i]
+                            del parentheses_list[i + 1]
+                    except:
+                        pass
+
+                delete_count = 0
+                for i in range(len(parentheses_list)):
+                    i -= delete_count
+                    try:
+                        if parentheses_list[i] == "e":
+                            result = int(parentheses_list[i - 1]) ** int(parentheses_list[i + 1])
+                            parentheses_list[i - 1] = result
+                            del parentheses_list[i]
+                            del parentheses_list[i + 1]
+                    except:
+                        pass
+
+                delete_count = 0
+                for i in range(len(parentheses_list)):
+                    i -= delete_count
+                    try:
+                        if parentheses_list[i] == "d" or parentheses_list[i] == "c":
+                            if parentheses_list[i] == "d":
+                                result = int(parentheses_list[i - 1]) / int(parentheses_list[i + 1])
+                            elif parentheses_list[i] == "c":
+                                result = int(parentheses_list[i - 1]) * int(parentheses_list[i + 1])
+                            parentheses_list[i - 1] = result
+                            del parentheses_list[i]
+                            del parentheses_list[i + 1]
+                    except:
+                        pass
+
+                delete_count = 0
+                for i in range(len(parentheses_list)):
+                    i -= delete_count
+                    try:
+                        if parentheses_list[i] == "b" or parentheses_list[i] == "a":
+                            if parentheses_list[i] == "b":
+                                result = int(parentheses_list[i - 1]) - int(parentheses_list[i + 1])
+                            elif parentheses_list[i] == "a":
+                                result = int(parentheses_list[i - 1]) + int(parentheses_list[i + 1])
+                            parentheses_list[i - 1] = result
+                            del parentheses_list[i]
+                            del parentheses_list[i + 1]
+                    except:
+                        pass
 
             open_parentheses_count -= 1
 
-        print(f"= {list}", end= ' ')
+        # 계산
+        delete_count = 0
+        for i in range(len(list)):
+            i -= delete_count
+            try:
+                if list[i] == "g" or list[i] == "f":
+                    if list[i] == "g":
+                        result = int(list[i - 1]) % int(list[i + 1])
+                    elif list[i] == "f":
+                        result = int(list[i - 1]) // int(list[i + 1])
+                    list[i - 1] = result
+                    del list[i]
+                    del list[i + 1]
+            except:
+                pass
+
+        delete_count = 0
+        for i in range(len(list)):
+            i -= delete_count
+            try:
+                if list[i] == "e":
+                    result = int(list[i - 1]) ** int(list[i + 1])
+                    list[i - 1] = result
+                    del list[i]
+                    del list[i + 1]
+            except:
+                pass
+
+        delete_count = 0
+        for i in range(len(list)):
+            i -= delete_count
+            try:
+                if list[i] == "d" or list[i] == "c":
+                    if list[i] == "d":
+                        result = int(list[i - 1]) / int(list[i + 1])
+                    elif list[i] == "c":
+                        result = int(list[i - 1]) * int(list[i + 1])
+                    list[i - 1] = result
+                    del list[i]
+                    del list[i + 1]
+            except:
+                pass
+
+        delete_count = 0
+        for i in range(len(list)):
+            i -= delete_count
+            try:
+                if list[i] == "b" or list[i] == "a":
+                    if list[i] == "b":
+                        result = int(list[i - 1]) - int(list[i + 1])
+                    elif list[i] == "a":
+                        result = int(list[i - 1]) + int(list[i + 1])
+                    list[i - 1] = result
+                    del list[i]
+                    del list[i + 1]
+            except:
+                pass
+
+        print(f"= {list[0]}", end= ' ')
 
 
 if __name__ == "__main__":
