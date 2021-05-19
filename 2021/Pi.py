@@ -196,7 +196,7 @@ def main():
             John_Machin(value, count)
         elif sel == 'Euler_1':
             Euler_1(value, count)
-        if sel == 'Euler_2':
+        elif sel == 'Euler_2':
             Euler_2(value, count)
         elif sel == 'Euler_3':
             Euler_3(value, count)
