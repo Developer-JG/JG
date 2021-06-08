@@ -267,7 +267,22 @@ It is a repository where all code that is being developed or completed is upload
 
 ### 1. project <a id="chapter-2021_project"></a>
 
-* **Not yet :D**
+* The Lets_go_to_college project
+
+  College entrance exam information search engine.
+  
+  ```
+  [History](Lets_go_to_college project)
+  
+  2020
+
+  February
+  2020
+
+  June
+  01 21w22a
+  02 21w22b
+  ```
 
 ### 2. Short project <a id="chapter-2021_short"></a>
 
