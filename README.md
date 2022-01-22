@@ -289,7 +289,7 @@ It is a repository where all code that is being developed or completed is upload
   Proof of the genetic relationship between the passive mobs and the hostile mobs.
   
   ```
-  [History](The Natural_Selection_Simulator)
+  [History](Natural_Selection_Simulator)
   
   21w27a
   21w28a
