@@ -274,14 +274,25 @@ It is a repository where all code that is being developed or completed is upload
   ```
   [History](Lets_go_to_college project)
   
-  2020
+   2021
 
-  February
-  2020
+   June
+   01 21w22a [0.1]
+   02 21w22b [0.2]
+   06 21w23a [0.3]
+   08 21w23b [0.4 GM]
+   10 21w23c [1.0]
+  ```
+  
+* The Natural_Selection_Simulator
 
-  June
-  01 21w22a
-  02 21w22b
+  Proof of the genetic relationship between the passive mobs and the hostile mobs.
+  
+  ```
+  [History](The Natural_Selection_Simulator)
+  
+  21w27a
+  21w28a
   ```
 
 ### 2. Short project <a id="chapter-2021_short"></a>
