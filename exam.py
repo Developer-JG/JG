@@ -10,6 +10,8 @@ plt.rcParams['ytick.labelsize'] = 12.
 plt.rcParams['axes.unicode_minus'] = False
 
 CHART_NAME = 'bandi'
+CLASS_NAME = '202337139'
+NAME = 'Jeonggyu-Hwang'
 cnt, PNG, UNDERBAR = 0, '.png', '_'
 filename = 'mpg.csv'
 
@@ -18,7 +20,8 @@ mpg = pd.read_csv(filename, encoding='CP949')
 def FileSave():
     global cnt
     cnt += 1
-    savefile = CHART_NAME + UNDERBAR + str(cnt).zfill(2) + PNG
+    savefile = CHART_NAME + UNDERBAR + CLASS_NAME + UNDERBAR + \
+                NAME + UNDERBAR + str(cnt).zfill(2) + PNG
     plt.savefig(savefile, dpi=400)
     print(savefile + ' 파일이 저장되었습니다.')
 
